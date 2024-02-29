@@ -10,7 +10,7 @@ export default function Hamilton() {
  
   const getHamiltonDistance = () => {
     setHdresult('')
-    axios.post('http://localhost:8000/api/dna/utils/hamilton_distance/', { 'fasta_id': fasta_id,'seq': seq,'seq2': seq2 })
+    axios.post('https://dnautils-backend1.onrender.com/api/dna/utils/hamilton_distance/', { 'fasta_id': fasta_id,'seq': seq,'seq2': seq2 })
     .then(res => setHdresult(res.data))
   };
 

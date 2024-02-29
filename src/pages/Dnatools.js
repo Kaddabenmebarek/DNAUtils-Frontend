@@ -10,31 +10,31 @@ export default function Dnatools() {
   
   const getReverseComp = () => {
     setDnaresult('')
-    axios.post('http://localhost:8000/api/dna/utils/reverse_complement/', { 'fasta_id': fasta_id,'seq': seq })
+    axios.post('https://dnautils-backend1.onrender.com/api/dna/utils/reverse_complement/', { 'fasta_id': fasta_id,'seq': seq })
     .then(res => setDnaresult(res.data))
   };
 
   const getNucFreq = () => {
     setDnaresult('')
-    axios.post('http://localhost:8000/api/dna/utils/nucleotide_freq/', { 'fasta_id': fasta_id,'seq': seq })
+    axios.post('https://dnautils-backend1.onrender.com/api/dna/utils/nucleotide_freq/', { 'fasta_id': fasta_id,'seq': seq })
       .then(res => setDnaresult(res.data))
   };
 
   const getCgContent = () => {
     setDnaresult('')
-    axios.post('http://localhost:8000/api/dna/utils/cg_freq/', { 'fasta_id': fasta_id,'seq': seq })
+    axios.post('https://dnautils-backend1.onrender.com/api/dna/utils/cg_freq/', { 'fasta_id': fasta_id,'seq': seq })
       .then(res => setDnaresult(res.data))
   };
 
   const toAminoAcid = () => {
     setDnaresult('')
-    axios.post('http://localhost:8000/api/dna/utils/translate_to_aminoacids/', { 'fasta_id': fasta_id,'seq': seq })
+    axios.post('https://dnautils-backend1.onrender.com/api/dna/utils/translate_to_aminoacids/', { 'fasta_id': fasta_id,'seq': seq })
       .then(res => setDnaresult(res.data))
   };
 
   const toFrames = () => {
     setDnaresult('')
-    axios.post('http://localhost:8000/api/dna/utils/toframes/', { 'fasta_id': fasta_id,'seq': seq })
+    axios.post('https://dnautils-backend1.onrender.com/api/dna/utils/toframes/', { 'fasta_id': fasta_id,'seq': seq })
       .then(res => setDnaresult(res.data))
   };
 

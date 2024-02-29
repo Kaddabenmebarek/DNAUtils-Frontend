@@ -10,14 +10,14 @@ export default function Collectseq() {
   const [seq, setSeq] = useState([{}])
 
   useEffect(() => {
-    axios.get('http://localhost:8000/api/dna')
+    axios.get('https://dnautils-backend1.onrender.com/api/dna')
       .then(res => {
         setDnaList(res.data)
       })
   });
 
   const addDnaHandler = () => {
-    axios.post('http://localhost:8000/api/dna/', { 'fasta_id': fasta_id, 'seq': seq })
+    axios.post('https://dnautils-backend1.onrender.com/api/dna/', { 'fasta_id': fasta_id, 'seq': seq })
       .then(res => console.log(res))
   };
 

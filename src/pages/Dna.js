@@ -3,7 +3,7 @@ import React from 'react'
 
 function DnaItem(props) {
     const deleteDnaHandler = (fasta_id) => {
-    axios.delete(`http://localhost:8000/api/dna/${fasta_id}`)
+    axios.delete(`https://dnautils-backend1.onrender.com/api/dna/${fasta_id}`)
         .then(res => console.log(res.data)) }
   
     return (
